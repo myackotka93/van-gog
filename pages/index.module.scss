@@ -1,0 +1,377 @@
+@import "@/styles/global/mixins";
+
+.promo {
+  background-image: url('/images/banner.png');
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  @include spacer(padding, x, 4);
+  @include spacer(padding, t, 3 / 1.7);
+  @include spacer(padding, b, 8);
+
+  @include tablet-small {
+    @include spacer(padding, x, 1 / 2);
+    @include spacer(padding, t, 3 / 4);
+    @include spacer(padding, b, 2);
+    background-image: url('/images/banner-mob.png');
+  }
+}
+
+.logo {
+  margin: 0 auto;
+  display: block;
+  max-width: 321px;
+  width: 100%;
+  @include spacer(margin, b, 4);
+
+  @include tablet-small {
+    max-width: 223px;
+    @include spacer(margin, b, 2);
+  }
+}
+
+.date {
+  font-weight: 700;
+  @include font-size(30, 25);
+  line-height: 48px;
+  text-transform: lowercase;
+  @include spacer(margin, b, 4);
+  font-weight: 700;
+
+  @include tablet-small {
+    @include spacer(margin, b, 3 / 2);
+  }
+}
+
+.text {
+  font-weight: 400;
+  @include font-size(30, 25);
+  line-height: 29px;
+  text-transform: uppercase;
+  @include spacer(margin, b, 1);
+
+  @include tablet-small {
+    @include spacer(margin, b, 1 / 2);
+  }
+}
+
+.title {
+  font-weight: 400;
+  @include font-size(150, 70);
+  line-height: 144px;
+  text-transform: uppercase;
+  @include spacer(margin, b, 1);
+
+  @include tablet-small {
+    @include spacer(margin, b, 1 / 2);
+    line-height: 57px;
+  }
+}
+
+.discription {
+  font-weight: 200;
+  @include font-size(20, 16);
+  line-height: 19px;
+  max-width: 472px;
+  width: 100%;
+  @include spacer(margin, b, 2);
+
+  @include tablet-small {
+    max-width: none;
+    margin-bottom: 443px;
+  }
+}
+
+.cards {
+  display: flex;
+
+  @include tablet-small {
+    display: none;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.card {
+  width: 33.33%;
+  @include spacer(margin, r, 3 / 4);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.card_image {
+  height: 100%;
+  @include spacer(margin, b, 3 / 4);
+}
+
+.info_image {
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 13px;
+  color: #FFFFFF;
+  
+}
+
+.exposition {
+  font-weight: 400;
+  @include font-size(65, 34);
+  line-height: 62px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  @include spacer(margin, b, 3 / 4);
+}
+
+.exposition_discription {
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 19px;
+  color: #FFFFFF;
+  max-width: 660px; 
+  width: 100%;
+  @include spacer(margin, b, 3 );
+
+  @include tablet-small {
+    @include spacer(margin, b, 1 );
+  }
+}
+
+.exposition__left {
+  @include tablet-small {
+    @include spacer(padding, y, 2);
+  }
+  // position: relative;
+}
+
+.exposition__right {
+  @include tablet-small {
+    padding-top: 0;
+  }
+}
+
+.exposition_flower {
+  width: 100%;
+
+  @include tablet-small {
+    width: 250px;
+  }
+}
+
+.images {
+  display: none;
+
+  @include tablet-small {
+    display: block;
+  }
+
+
+}
+
+.columns {
+  display: flex;
+  @include spacer(margin, b, 2);
+
+  @include tablet-small {
+    flex-direction: column;
+  }
+}
+
+.column {
+  @include tablet-small {
+    @include spacer(margin, b, 3 / 2);
+  }
+}
+
+.contacts_layout {
+  @include tablet-small  {
+    @include spacer(padding, x, 1 / 2);
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  width: 33.33%;
+
+  @include tablet-small {
+    width: 100%;
+  }
+}
+
+.contacts {
+  font-weight: 400;
+  @include font-size(65, 34);
+  line-height: 62px;
+  text-transform: uppercase;
+  @include spacer(margin, b, 3 / 2);
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 19px;
+  text-transform: uppercase;
+  @include spacer(margin, b); 
+}
+
+.day {
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 19px;
+  @include spacer(margin, b, 3 / 8);   
+}
+
+.days {
+  @include spacer(margin, r, 2); 
+}
+
+.map {
+  @include aspect-ratio(20, 6);
+  position: relative;
+
+  @include tablet {
+    @include aspect-ratio(10, 6);
+  }
+
+  @include tablet-small {
+    flex-direction: row;
+  }
+
+  @include mobile {
+    @include aspect-ratio(6, 6);
+  }
+
+  &_iframe {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    // -webkit-filter: grayscale(100%);
+  }
+}
+
+.layout_footer {
+  @include spacer(padding, t, 2);
+
+  @include tablet-small {
+    padding-top: 0;
+  }
+}
+
+.Button {
+  border: none;
+  @include tablet-small {
+    display: block;
+    text-align: center;
+  }
+}
+
+.img_footer {
+  @include tablet-small {
+    display: none;
+  }
+}
+
+.img_footer_small {
+  display: none;
+
+  @include tablet-small {
+    display: block;
+  }
+}
+
+.languages {
+  display: flex;
+  position: absolute;
+  top: 80px;
+  left: 130px;
+
+  @include tablet-small {
+    top: 140px;
+    right: 0;
+    position: static;
+    float: right;
+  }
+}
+
+.language {
+  font-weight: 200;
+  @include font-size(26,20);
+  line-height: 31px;
+  text-transform: lowercase;
+  color: #0072D8;
+  @include spacer(margin, r, 1);
+  
+  &:active {
+    color: #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+  }
+
+  &:hover {
+    color: #FFFFFF;
+    cursor: pointer;
+    border-bottom: 1px solid #FFFFFF;
+  }
+}
+
+.exposition__layout {
+  @include tablet-small  {
+    @include spacer(padding, x, 1 / 2);
+  }  
+}
+
+.sliders {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    @include spacer(margin, y, 2);
+    width: 100%;
+
+    @include tablet-small {
+      display: none;
+    }
+  }
+}
+
+.immersia {
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 62px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  max-width: 670px;
+  width: 100%;
+  
+  @include tablet-small {
+    display: none;
+  }
+}
+
+.sliders {
+  align-items: stretch;
+  .swiper {
+    padding-bottom: 0;
+    .SwiperSlide {
+      img {
+        width: 100%;
+        height: 85%;
+      }
+    }
+  }
+}
+
+.immersia_container {
+  @include tablet-small {
+    display: none;
+  }
+}
+

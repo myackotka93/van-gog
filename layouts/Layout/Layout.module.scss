@@ -1,0 +1,23 @@
+@import "@/styles/global/mixins";
+
+.Layout {
+  width: 100%;
+  display: flex;
+
+  @include vw-property(
+    (
+      // padding-top: 32,
+      // padding-bottom: 32,
+    )
+  );
+
+  @include tablet-small {
+    flex-direction: column;
+    // padding-left: 24px;
+    // padding-right: 24px;
+  }
+
+  @include mobile {
+    // padding: 8px;
+  }
+}

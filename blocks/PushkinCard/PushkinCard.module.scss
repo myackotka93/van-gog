@@ -1,0 +1,106 @@
+@import "@/styles/global/mixins";
+
+.Visiting {
+  background-color: #000;
+  color: #fff;
+  font-family: "PTSans";
+  @include spacer(padding, b, 2);
+
+  @include tablet-small {
+    flex-direction: column-reverse;
+    @include spacer(padding, b, 5);
+  }
+}
+
+.right {
+  @include tablet {
+    @include spacer(padding, x, 3 / 4);
+  }
+}
+
+.img {
+  width: 100%;
+}
+
+.title {
+  font-family: 'PTSerif';
+  font-weight: 400;
+  @include font-size(60, 40);
+  line-height: 94.4%;
+  max-width: 594px;
+  width: 100%;
+  @include spacer(margin, b, 3 / 2);
+
+  @include tablet {
+    text-align: center;
+  }
+}
+
+.two_columns {
+  display: flex;
+  @include spacer(margin, b, 10 / 8);
+
+  @include tablet-small {
+    flex-direction: column;
+  }
+}
+
+.discription {
+  max-width: 293px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  @include spacer(margin, b, 3 / 4);
+}
+
+.booking {
+  max-width: 293px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+
+  @include tablet-small {
+    @include spacer(margin, b, 3 / 4);
+  }
+}
+
+.discription:last-child {
+  margin-bottom: 0;
+}
+
+.tel_title {
+  max-width: 293px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  @include spacer(margin, b, 3 / 2);
+
+  @include tablet-small {
+    @include spacer(margin, b, 1 / 2);
+  }
+}
+
+.number_first {
+  @include spacer(margin, b, 10 / 80);
+}
+
+.first {
+  // @include vw-property(
+  //   (
+  //     margin-right: 146
+  //   )
+  // );
+
+  width: 55%;
+}
+
+.button {
+  @include tablet-small {
+    display: block;
+    margin: 0 auto;
+    width: 65%;
+  }
+}

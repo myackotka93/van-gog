@@ -1,0 +1,140 @@
+@import "../../styles/global/_mixins.scss";
+
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include spacer(padding, x, 2);
+  @include spacer(margin, t, 1);
+
+  @include tablet-small {
+    @include spacer(padding, x, 3 / 4);
+  }
+}
+
+.img {
+  max-width: 270px;
+  width: 100%;
+
+  @include tablet-small {
+    max-width: 171px;
+  }
+}
+
+.Button {
+  @include tablet {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}
+
+.hamburger {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+  }
+}
+
+.hamburger_img {
+  width: 28px;
+  height: 16px;
+}
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  justify-content: flex-end;
+  transform: translateX(130%);
+  transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.popup__container {
+  @include spacer(padding, x, 3 / 4);
+  // @include spacer(padding, t, 3);
+  background-color: #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // align-items: center;
+  position: relative;
+}
+
+.popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  @include spacer(margin, t, 5);
+}
+
+.popup__button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  background-size: cover;
+  position: absolute;
+  top: 52px;
+  right: 22px;
+}
+
+.popup__button:hover {
+  opacity: 0.6;
+  transition-duration: 1s;
+}
+
+.popup_opened {
+  transform: translateX(0);
+}
+
+.column_directions {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  @include spacer(margin, b, 2);
+
+  @include tablet-small {
+    @include spacer(margin, b, 3);
+  }
+}
+
+.item {
+  font-family: 'PTSerif';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 23px;
+  @include spacer(margin, b, 1 / 2);
+
+  &.active {
+    background-color: transparent;
+  }
+}
+
+.img_small {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 200px;
+}

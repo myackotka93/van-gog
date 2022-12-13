@@ -1,0 +1,13 @@
+@import "@/styles/global/mixins";
+
+.OnlyRight {
+  margin-left: auto;
+  width: 75%;
+  @include spacer(padding, t, 8);
+  // @include spacer(padding, x);
+
+  @include tablet {
+    margin-left: 0;
+    width: 100%;
+  }
+}

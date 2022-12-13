@@ -1,0 +1,85 @@
+@import "@/styles/global/mixins";
+
+.Footer {
+  background-color: #000;
+  color: #ffffff;
+  font-family: "PTSans";
+}
+
+.img {
+  max-width: 300px;
+  width: 100%;
+
+  @include tablet {
+    max-width: 300px;
+  }
+
+  @include tablet-small {
+    max-width: 215px;
+  }
+}
+
+.two_columns {
+  display: flex;
+
+  @include tablet-small {
+    flex-direction: column;
+  }
+}
+
+.first_column {
+  width: 55%;
+
+  @include tablet-small {
+    width: 100%;
+  }
+  
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  @include spacer(margin, b, 2);
+
+  @include tablet-small {
+    @include spacer(margin, b, 3);
+  }
+}
+
+.container {
+  @include spacer(margin, b, 3);
+}
+
+.item {
+  font-family: "PTMono";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 94.4%;
+  @include spacer(margin, b, 1 / 4)
+}
+
+.text {
+  font-family: 'PTSerif';
+}
+
+.input_group {
+  display: flex;
+}
+
+.container {
+  @include tablet {
+    @include spacer(margin, b, 3 / 4)
+  }
+}
+
+.LayoutLeft {
+  @include spacer(padding, x, 2);
+
+  @include tablet-small {
+    @include spacer(padding, x, 3 / 4);
+  }
+}
+
+.LayoutRight {
+  @include spacer(padding, x, 3 / 4);
+}

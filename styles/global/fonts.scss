@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "PTMono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../public/fonts/PTMono-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PTSans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../public/fonts/PTSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PTSerif";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../public/fonts/PTSerif-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../public/fonts/GothamPro-Black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../public/fonts/GothamPro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../../public/fonts/GothamPro-Light.woff") format("woff");
+}
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   @include spacer(margin, b);
+// }
+
+h1,
+.h1 {
+  font-weight: 600;
+  @include font-size(80, 40);
+  line-height: 100%;
+}
+
+h2,
+.h2 {
+  font-weight: 600;
+  @include font-size(70, 32);
+  line-height: 100%;
+}
+h3,
+.h3 {
+  font-weight: 500;
+  @include font-size(50, 26);
+}
+
+h4,
+.h4 {
+  font-weight: 500;
+  @include font-size(40, 22);
+}
+
+h5,
+.h5 {
+  font-weight: 500;
+  @include font-size(36, 22);
+}
+
+h6,
+.h6 {
+  font-weight: 500;
+  @include font-size(26, 20);
+}
+
+.h7 {
+  font-weight: 500;
+  @include font-size(22);
+  line-height: 130%;
+}
+
+// ul {
+//   @include flexGap(16px, column, li);
+//   display: flex;
+//   flex-direction: column;
+
+//   li {
+//     @include font-size(20, 14);
+//     line-height: 1.66;
+//     // @include spacer(margin, b, 1 / 2);
+//     position: relative;
+//     padding-left: 22px;
+
+//     &::before {
+//       content: "";
+//       width: 6px;
+//       height: 6px;
+//       left: 0;
+//       top: 12px;
+//       position: absolute;
+//       display: block;
+//       border-radius: 50%;
+//       background: #0e3fb5;
+//     }
+//   }
+// }
+
+p {
+  @include font-size(20, 16);
+  line-height: 166%;
+  @include spacer(margin, b);
+
+  @include tablet {
+    font-size: size(20, 14, 1280, 375);
+    // @include font-size(20, 14, 1280, 375)
+  }
+}

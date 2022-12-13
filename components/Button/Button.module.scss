@@ -1,0 +1,58 @@
+@import "@/styles/global/mixins";
+
+.Button {
+  // width: 200px;
+  @include spacer(padding, x, 3 / 2);
+  @include spacer(padding, y, 3 / 3.2);
+  border-radius: 48px;
+  border: 1px solid #000;;
+  height: 56px;
+  background-color: #FED41C;
+  color: #000;
+  font-weight: 500;
+  @include font-size(20, 16);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+  
+ text-transform: uppercase;
+
+  @include laptop {
+    height: 46px;
+  }
+
+  @include mobile {
+    @include spacer(padding, x, 10 / 16);
+  }
+}
+
+// .empty {
+//   background-color: transparent;
+//   border: 1px solid #000;
+//   color: #000;
+//   @include transition(color, background-color);
+
+//   &:hover {
+//     background-color: #000;
+//     color: #fff;
+//   }
+
+//   &.active {
+//     background-color: #000;
+//     color: #fff;
+//   }
+// }
+
+// .white {
+//   background-color: #fff;
+//   border: 1px solid #fff;
+//   color: #000;
+// }
+
+// .black {
+//   background-color: #000;
+//   border: 1px solid #000;
+//   color: #fff;
+// }

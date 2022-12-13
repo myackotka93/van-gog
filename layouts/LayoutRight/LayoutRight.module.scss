@@ -1,0 +1,57 @@
+@import "@/styles/global/mixins";
+
+.LayoutRight {
+  width: 75%;
+  // @include spacer(padding, y, 11 / 4);
+  @include spacer(padding, t, 8);
+  // border-left: 1px solid #dadce0;
+
+  @include vw-property(
+    (
+      // padding-top: 88,
+      // padding-bottom: 88,
+    )
+  );
+
+  @include tablet-small {
+    border-left: none;
+    // border-top: 1px solid #dadce0;
+    width: 100%;
+
+    @include vw-property(
+      (
+        // padding-top: 50,
+        // padding-bottom: 50,
+      )
+    );
+  }
+
+  @include mobile {
+    // padding-left: 0;
+    // padding-right: 0;
+  }
+}
+
+.right {
+  @include vw-property-big(
+    (
+      // padding-right: 152,
+    )
+  );
+
+  @include laptop {
+    @include vw-property(
+      (
+        // padding-right: 103,
+      )
+    );
+  }
+
+  @include tablet {
+    // padding-right: 32px;
+  }
+
+  @include mobile {
+    // padding-right: 0;
+  }
+}

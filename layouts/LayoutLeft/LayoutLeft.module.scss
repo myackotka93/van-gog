@@ -1,0 +1,47 @@
+@import "@/styles/global/mixins";
+
+.LayoutLeft {
+  width: 25%;
+  @include spacer(padding, t, 8);
+  @include vw-property-big(
+    (
+      // padding-left: 158,
+    )
+  );
+
+  @include vw-property(
+    (
+      // padding-top: 88,
+      // padding-bottom: 88,
+    )
+  );
+
+  @include laptop {
+    @include vw-property(
+      (
+        // padding-left: 103,
+      )
+    );
+  }
+
+  @include tablet {
+    // padding-left: 32px;
+  }
+
+  @include tablet-small {
+    width: 100%;
+    // padding-left: 32px;
+    // padding-right: 32px;
+
+    @include vw-property(
+      (
+        // padding-top: 50,
+        // padding-bottom: 50,
+      )
+    );
+  }
+
+  @include mobile {
+    // padding: 24px 0;
+  }
+}
