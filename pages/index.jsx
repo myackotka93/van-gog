@@ -154,7 +154,7 @@ export default function Home({ attributes, ...props }) {
           </Layout>
 
           <Layout className={styles.map}>
-            <iframe src={t("map")} width="100%" height="632" frameborder="0"></iframe>
+            <iframe src={t("map")} width="100%" height="632" frameBorder="0"></iframe>
           </Layout>
 
           <Layout className={styles.layout_footer}>
