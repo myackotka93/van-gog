@@ -13,6 +13,7 @@ i18n
   .init({
     // Стандартный язык
     fallbackLng: 'ru',
+    locales: ['ru','arm','kz'],
     debug: true,
     // Распознавание и кэширование языковых кук
     detection: {
@@ -25,10 +26,10 @@ i18n
     react: {
       wait: true,
     },
-    localePath: 
-      typeof window === "undefined"
-      ? require('path').resolve('/locales')
-      : '/locales'
+    backend: {
+      // for all available options read the backend's repository readme file
+      loadPath: '/locales/{{lng}}/{{ns}}.json'
+    },
   })
 
 export default i18n;

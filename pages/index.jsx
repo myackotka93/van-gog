@@ -85,15 +85,7 @@ export default function Home({ attributes, ...props }) {
                 <Swiper
                     slidesPerView={1.97}
                     className={styles.swiper}
-                    // spaceBetween={0}
-                    // breakpoints={{
-                    // 800: {
-                    //     slidesPerView: 1,
-                    //     spaceBetween: 58
-                    //   }
-                    // }}
                     loop
-                    isEnableLoop
                     pagination={{
                       clickable: true
                     }}
