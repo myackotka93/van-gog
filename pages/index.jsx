@@ -10,8 +10,6 @@ import Button from '@/components/Button/Button';
 import styles from './index.module.scss';
 import './i18n';
 import { useTranslation } from "react-i18next";
-// import typograf, { parser } from '@/utils/typograf';
-// import * as prettyjson from "prettyjson";
 
 export default function Home({ attributes, ...props }) {
 
@@ -24,7 +22,6 @@ export default function Home({ attributes, ...props }) {
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language);
-    localStorage.setItem("language", language);
   };
 
   return (
@@ -34,8 +31,8 @@ export default function Home({ attributes, ...props }) {
           <div className={styles.promo}>
             <img className={styles.logo} src="/images/logo.svg" alt="" />
             <div className={styles.languages}>
-              <div className={styles.language} onClick={() => changeLanguage("ru")}>RU</div>
-              <div className={styles.language} onClick={() => changeLanguage("kz")}>KZ</div>
+              <div className={styles.language} onClick={() => changeLanguage("ru")}>ru</div>
+              <div className={styles.language} onClick={() => changeLanguage("kz")}>kz</div>
               <div className={styles.language} onClick={() => changeLanguage("arm")}>arm</div>
             </div>
             <div className={styles.date}>25.12-10.03</div>

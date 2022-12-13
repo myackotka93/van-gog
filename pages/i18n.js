@@ -24,7 +24,11 @@ i18n
     },
     react: {
       wait: true,
-    }
+    },
+    localePath: 
+      typeof window === "undefined"
+      ? require('path').resolve('/locales')
+      : '/locales'
   })
 
 export default i18n;
