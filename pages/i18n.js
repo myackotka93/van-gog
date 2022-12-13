@@ -14,7 +14,7 @@ i18n
     // Стандартный язык
     fallbackLng: 'ru',
     locales: ['ru','arm','kz'],
-    debug: true,
+    // debug: true,
     // Распознавание и кэширование языковых кук
     detection: {
       order: ['queryString', 'cookie'],

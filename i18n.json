@@ -1,9 +1,0 @@
-{
-    "locales": ["ru", "kz", "arm"],
-    "defaultLocale": "ru",
-    "pages": {
-      "*": ["translation"],
-      "/": ["translation"]
-    }
-  }
-  
