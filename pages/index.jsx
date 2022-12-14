@@ -7,33 +7,40 @@ import LayoutRight from '@/layouts/LayoutRight/LayoutRight';
 import { Navigation, Keyboard , Pagination } from 'swiper';
 import OnlyRight from '@/layouts/OnlyRight/OnlyRight';
 import Button from '@/components/Button/Button';
+import useTranslation from 'next-translate/useTranslation';
+import Link from 'next/link';
 import styles from './index.module.scss';
-import './i18n';
-import { useTranslation } from "react-i18next";
 
 export default function Home({ attributes, ...props }) {
 
   const [domLoaded, setDomLoaded] = useState(false);
-  const { t, i18n } = useTranslation(false);
+  const { t } = useTranslation("common");
 
   useEffect(() => {
     setDomLoaded(true);
   }, []);
 
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language);
-  };
+  // const changeLanguage = (language) => {
+  //   i18n.changeLanguage(language);
+  // };
 
   return (
-    <>{domLoaded && (
+    <>
+    {domLoaded && (
 
         <div className={styles.body}>
           <div className={styles.promo}>
             <img className={styles.logo} src="/images/logo.svg" alt="" />
             <div className={styles.languages}>
-              <div className={styles.language} onClick={() => changeLanguage("ru")}>ru</div>
-              <div className={styles.language} onClick={() => changeLanguage("kz")}>kz</div>
-              <div className={styles.language} onClick={() => changeLanguage("arm")}>arm</div>
+              <Link href="/" locale="ru">
+                <h4 className={styles.language}>ru</h4>
+              </Link>
+              <Link href="/" locale="kz">
+                <h4 className={styles.language}>kz</h4>
+              </Link>
+              <Link href="/" locale="arm">
+                <h4 className={styles.language}>arm</h4>
+              </Link>
             </div>
             <div className={styles.date}>25.12-10.03</div>
             <div className={styles.text}>{t("text")}</div>
@@ -153,7 +160,7 @@ export default function Home({ attributes, ...props }) {
           </Layout>
         </div>
 
-      )}
+        )} 
     </>
   )
 }
