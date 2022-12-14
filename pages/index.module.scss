@@ -297,12 +297,13 @@
 
 .languages {
   display: flex;
-  @include spacer(padding, t, 1 / 4);
+  // @include spacer(padding, t, 1 / 4);
   position: absolute;
   top: 80px;
   left: 130px;
 
   @include tablet-small {
+    @include spacer(padding, t, 1 / 4);
     top: 140px;
     right: 0;
     position: static;
@@ -315,7 +316,7 @@
   @include font-size(26,20);
   line-height: 31px;
   text-transform: lowercase;
-  color: #0072D8;
+  color: #fff;
   @include spacer(margin, r, 1);
 
   &:last-child {
