@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Layout from '@/layouts/Layout/Layout';
 import LayoutLeft from '@/layouts/LayoutLeft/LayoutLeft';
@@ -19,10 +18,6 @@ export default function Home({ attributes, ...props }) {
   useEffect(() => {
     setDomLoaded(true);
   }, []);
-
-  // const changeLanguage = (language) => {
-  //   i18n.changeLanguage(language);
-  // };
 
   return (
     <>
@@ -111,39 +106,42 @@ export default function Home({ attributes, ...props }) {
             <OnlyRight className={styles.OnlyRight}>
               <div className={styles.contacts}>{t("contacts")}</div>
               <div className={styles.columns}>
+ 
+                <div className={styles.column}>
+                  <div className={styles.tickets}>
+                    <div className={styles.heading}>{t("tickets")}</div>
+                    <div className={styles.flex}>
+                      <div className={styles.days}>
+                        <div className={styles.day}>{t("price.part1")}</div>
+                        <div className={styles.day}>{t("price.part2")}</div>
+                      </div>
+                      <div className={styles.days}>
+                        <div className={styles.day}>{t("price.part7")}</div>
+                        <div className={styles.day}>{t("price.part3")}</div>
+                        <div className={styles.day}>{t("price.part4")}</div>
+                      </div>
+                      <div className={styles.days}>
+                        <div className={styles.day}>{t("price.part8")}</div>
+                        <div className={styles.day}>{t("price.part5")}</div>
+                        <div className={styles.day}>{t("price.part6")}</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className={styles.phone}>
+                    <div className={styles.heading}>{t("phone_title")}</div>
+                    <div className={styles.day}>{t("phone")}</div>
+                    <div className={styles.day}>{t("adress")}</div>
+                  </div>
+                </div>
+
                 <div className={styles.column}>
                   <div className={styles.heading}>{t("operating_mode")}</div>
-                  <div className={styles.flex}>
-                    <div className={styles.days}>
-                      <div className={styles.day}>{t("day.part1")}</div>
-                      {/* <div className={styles.day}>{t("day.part2")}</div> */}
-                    </div>
-                    <div className={styles.days}>
-                      <div className={styles.day}>{t("day.part3")}</div>
-                      {/* <div className={styles.day}>{t("day.part4")}</div> */}
-                    </div>
-                  </div>
+                  <div className={styles.day}>{t("day.part1")}</div>
+                  <div className={styles.day}>{t("day.part3")}</div>
                 </div>
 
-                <div className={styles.column}>
-                  <div className={styles.heading}>{t("tickets")}</div>
-                  <div className={styles.flex}>
-                    <div className={styles.days}>
-                      <div className={styles.day}>{t("price.part1")}</div>
-                      <div className={styles.day}>{t("price.part2")}</div>
-                    </div>
-                    <div className={styles.days}>
-                      <div className={styles.day}>{t("price.part3")}</div>
-                      <div className={styles.day}>{t("price.part4")}</div>
-                    </div>
-                  </div>
-                </div>
 
-                <div className={styles.column}>
-                  <div className={styles.heading}>{t("phone_title")}</div>
-                  <div className={styles.day}>{t("phone")}</div>
-                  <div className={styles.day}>{t("adress")}</div>
-                </div>
               </div>
               
             </OnlyRight>
