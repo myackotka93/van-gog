@@ -116,12 +116,12 @@ export default function Home({ attributes, ...props }) {
                         <div className={styles.day}>{t("price.part2")}</div>
                       </div>
                       <div className={styles.days}>
-                        <div className={styles.day}>{t("price.part7")}</div>
+                        <div className={styles.day_bold}>{t("price.part7")}</div>
                         <div className={styles.day}>{t("price.part3")}</div>
                         <div className={styles.day}>{t("price.part4")}</div>
                       </div>
                       <div className={styles.days}>
-                        <div className={styles.day}>{t("price.part8")}</div>
+                        <div className={styles.day_bold}>{t("price.part8")}</div>
                         <div className={styles.day}>{t("price.part5")}</div>
                         <div className={styles.day}>{t("price.part6")}</div>
                       </div>
@@ -137,7 +137,7 @@ export default function Home({ attributes, ...props }) {
 
                 <div className={styles.column}>
                   <div className={styles.heading}>{t("operating_mode")}</div>
-                  <div className={styles.day}>{t("day.part1")}</div>
+                  <div className={styles.day_bold}>{t("day.part1")}</div>
                   <div className={styles.day}>{t("day.part3")}</div>
                 </div>
 

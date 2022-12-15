@@ -228,6 +228,14 @@
   @include spacer(margin, b, 3 / 8);   
 }
 
+.day_bold {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 19px;
+  color: #FFFFFF;
+  @include spacer(margin, b, 3 / 8); 
+}
+
 .days {
   display: flex;
   flex-direction: column;
