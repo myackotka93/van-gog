@@ -25,10 +25,10 @@ arrPath.forEach(element => {
     fs.mkdirSync(currentResolvePath); // если нет, то создаем новую
   }
 
-  const currentResolvePathStory = path.resolve(...srcStoryPath, ...currentArray);
-  if (!fs.existsSync(currentResolvePathStory)) { // проверка - существует такая директория или нет?
-    fs.mkdirSync(currentResolvePathStory); // если нет, то создаем новую
-  }
+  // const currentResolvePathStory = path.resolve(...srcStoryPath, ...currentArray);
+  // if (!fs.existsSync(currentResolvePathStory)) { // проверка - существует такая директория или нет?
+  //   fs.mkdirSync(currentResolvePathStory); // если нет, то создаем новую
+  // }
 });
 
 const componentPath = [...srcPath, ...arrPath];
@@ -54,14 +54,14 @@ if (isFunctional) {
   });
 }
 
-const storyComponents = storiesComponent({
-  path: arrPath,
-  componentName: componentName,
+// const storyComponents = storiesComponent({
+//   path: arrPath,
+//   componentName: componentName,
 
-})
+// })
 
 fs.writeFileSync(path.resolve(...componentPath, `${componentName}.js`), componentCode);
-fs.writeFileSync(path.resolve(...componentPathStory, `${componentName}.stories.js`), storyComponents);
+// fs.writeFileSync(path.resolve(...componentPathStory, `${componentName}.stories.js`), storyComponents);
 // создание файла стилей
 const styleCode = `@import '@/styles/global/mixins';
 
